@@ -1,0 +1,246 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+    padding:25px;
+}
+
+.container{
+    max-width:1400px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.05);
+}
+
+/* HEADER */
+
+.header{
+    margin-bottom:25px;
+}
+
+.logo-section{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    background:#22c55e;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-size:24px;
+}
+
+.logo-section h1{
+    font-size:38px;
+    margin-bottom:4px;
+}
+
+.logo-section p{
+    color:#6b7280;
+}
+
+/* ADD BOX */
+
+.add-box{
+    display:flex;
+    gap:15px;
+    margin-bottom:25px;
+}
+
+.add-box input{
+    flex:1;
+    height:60px;
+    border:1px solid #d1d5db;
+    border-radius:15px;
+    padding:0 18px;
+    font-size:17px;
+    outline:none;
+}
+
+.add-box button{
+    border:none;
+    background:#22c55e;
+    color:white;
+    padding:0 25px;
+    border-radius:15px;
+    font-size:16px;
+    cursor:pointer;
+    font-weight:600;
+}
+
+/* WEEK NAV */
+
+.week-nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+    background:#f9fafb;
+    padding:18px;
+    border-radius:15px;
+}
+
+.week-nav button{
+    border:none;
+    background:white;
+    padding:12px 20px;
+    border-radius:10px;
+    cursor:pointer;
+    box-shadow:0 4px 10px rgba(0,0,0,0.05);
+}
+
+.week-nav h2{
+    font-size:24px;
+}
+
+/* TABLE */
+
+.table-wrapper{
+    overflow-x:auto;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    min-width:1000px;
+}
+
+th,
+td{
+    padding:20px;
+    border-bottom:1px solid #e5e7eb;
+    text-align:center;
+}
+
+th:first-child,
+td:first-child{
+    text-align:left;
+    width:250px;
+}
+
+.today{
+    background:#ecfdf5;
+}
+
+.habit-cell{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:10px;
+}
+
+.actions{
+    display:flex;
+    gap:8px;
+}
+
+.actions button{
+    width:35px;
+    height:35px;
+    border:none;
+    border-radius:10px;
+    background:#f3f4f6;
+    cursor:pointer;
+}
+
+.delete-btn{
+    color:red;
+}
+
+/* CHECKBOX */
+
+.check{
+    width:38px;
+    height:38px;
+    border-radius:12px;
+    border:2px solid #d1d5db;
+    margin:auto;
+    cursor:pointer;
+    transition:0.2s;
+}
+
+.check.active{
+    background:#22c55e;
+    border:none;
+    position:relative;
+}
+
+.check.active::after{
+    content:"✔";
+    color:white;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+}
+
+/* STREAK */
+
+.streak{
+    background:#fff7ed;
+    color:#ea580c;
+    padding:8px 15px;
+    border-radius:999px;
+    font-weight:700;
+}
+
+/* EMPTY */
+
+.empty-state{
+    margin-top:30px;
+    border:2px dashed #d1d5db;
+    border-radius:20px;
+    padding:50px 20px;
+    text-align:center;
+}
+
+.empty-state i{
+    font-size:50px;
+    color:#6b7280;
+    margin-bottom:15px;
+}
+
+.empty-state h3{
+    font-size:28px;
+    margin-bottom:10px;
+}
+
+.empty-state p{
+    color:#6b7280;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:700px){
+
+    .add-box{
+        flex-direction:column;
+    }
+
+    .week-nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .week-nav h2{
+        font-size:20px;
+    }
+
+    .logo-section h1{
+        font-size:28px;
+    }
+
+}
