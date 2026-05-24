@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Habit Tracker</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+</head>
+<body>
+
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="header">
+
+    <div class="logo-section">
+
+      <div class="logo">
+        <i class="fa-solid fa-check"></i>
+      </div>
+
+      <div>
+        <h1>Habit Tracker</h1>
+        <p>Build good habits, one day at a time.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- ADD HABIT -->
+  <div class="add-box">
+
+    <input
+      type="text"
+      id="habitInput"
+      placeholder="e.g. Read 30 min"
+    >
+
+    <button id="addBtn">
+      <i class="fa-solid fa-plus"></i>
+      Add Habit
+    </button>
+
+  </div>
+
+
+  <!-- WEEK NAV -->
+  <div class="week-nav">
+
+    <button id="prevWeek">
+      <i class="fa-solid fa-chevron-left"></i>
+      Previous
+    </button>
+
+    <h2 id="weekTitle"></h2>
+
+    <button id="nextWeek">
+      Next
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+
+  </div>
+
+
+  <!-- TABLE -->
+  <div class="table-wrapper">
+
+    <table id="habitTable">
+
+    </table>
+
+  </div>
+
+
+  <!-- EMPTY -->
+  <div class="empty-state" id="emptyState">
+
+    <i class="fa-regular fa-clipboard"></i>
+
+    <h3>No habits yet</h3>
+
+    <p>Add your first habit to start tracking.</p>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
